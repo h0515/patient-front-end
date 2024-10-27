@@ -130,7 +130,7 @@ export default {
   },
   mounted() {
     const res = testLocal()
-    console.log(res);
+    console.log(res)
     if (this.loginForm.username === '') {
       this.$refs.username.focus()
     } else if (this.loginForm.password === '') {
