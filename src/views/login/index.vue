@@ -76,6 +76,7 @@
 <script>
 import { validUsername } from '@/utils/validate'
 import SocialSign from './components/SocialSignin'
+import { testLocal } from '@/api/login'
 
 export default {
   name: 'Login',
@@ -128,6 +129,8 @@ export default {
     // window.addEventListener('storage', this.afterQRScan)
   },
   mounted() {
+    const res = testLocal()
+    console.log(res);
     if (this.loginForm.username === '') {
       this.$refs.username.focus()
     } else if (this.loginForm.password === '') {
